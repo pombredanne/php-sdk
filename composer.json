@@ -1,0 +1,22 @@
+{
+    "name": "vulndb/php-sdk",
+    "description": "Vulnerability database PHP SDK",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anthon Pang",
+            "email": "anthon.pang@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "VulnDb\\": "src/" }
+    },
+    "require": {
+        "cilex/cilex": "dev-master",
+        "cpliakas/git-wrapper": "~1.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "~2.3",
+        "phpunit/phpunit": "~3.7"
+    }
+}

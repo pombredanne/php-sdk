@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+/**
+ * VulnDB PHP SDK
+ *
+ * @copyright 2015 Anthon Pang
+ *
+ * @license http://opensource.org/licenses/MIT MIT
+ */
+
+if (!$loader = include __DIR__.'/../vendor/autoload.php') {
+    die('You must set up the project dependencies.');
+}
+
+$app = new \Cilex\Application('VulnDB', \VulnDb\Version::VERSION);
+
+$app['service.vulnerability_database'] = function () { return new \VulnDb\Service\VulnerabilityDatabaseService; };
+$app['service.vulnerability_factory']  = function () { return new \VulnDb\Service\VulnerabilityFactoryService; };
+$app['service.reference']              = function () { return new \VulnDb\Service\ReferenceService; };
+
+$app->command(new \VulnDb\Command\UpdateDatabaseCommand());
+
+$app->run();
