@@ -1,5 +1,5 @@
 {
-    "name": "vipsoft/vulndb-php",
+    "name": "vulndb/vulndb-php",
     "type": "library",
     "description": "Vulnerability database PHP SDK",
     "keywords": [
