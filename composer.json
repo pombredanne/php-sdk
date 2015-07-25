@@ -1,18 +1,27 @@
 {
-    "name": "vulndb/php-sdk",
+    "name": "vipsoft/vulndb-php",
+    "type": "library",
     "description": "Vulnerability database PHP SDK",
+    "keywords": [
+        "vulnerability",
+        "vulndb",
+        "owasp",
+        "cwe",
+        "wasc"
+    ],
     "license": "MIT",
     "authors": [
         {
             "name": "Anthon Pang",
-            "email": "anthon.pang@gmail.com"
+            "email": "anthon.pang@gmail.com",
+            "role": "Developer"
         }
     ],
     "autoload": {
         "psr-4": { "VulnDb\\": "src/" }
     },
     "require": {
-        "cilex/cilex": "dev-master",
+        "cilex/cilex": "~1.0",
         "cpliakas/git-wrapper": "~1.0"
     },
     "require-dev": {
