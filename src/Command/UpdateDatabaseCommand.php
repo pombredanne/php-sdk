@@ -37,10 +37,9 @@ class UpdateDatabaseCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $container = $this->getApplication()->getContainer();
-        $service   = $container['service.vulnerability_database'];
-        $results   = $service->updateDb();
+        $service = $this->getApplication()->getService('vulndb.service.repository');
+        $service->updateDatabase();
 
-        $output->writeln($results);
+        $output->writeln('Updated to ' . $service->getRepositoryVersion());
     }
 }

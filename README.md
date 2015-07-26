@@ -19,7 +19,7 @@ PHP SDK to access the [vulnerability database](https://github.com/vulndb/data)
 
 ## Updating the Vulnerability Database
 
-This package does not embed the [vulnerability database](https://github.com/vulndb/data).
+This package embeds the [vulnerability database](https://github.com/vulndb/data).
 To install/update the database, run:
 
 ```

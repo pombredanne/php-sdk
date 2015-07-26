@@ -28,8 +28,9 @@ class VersionTest extends \PHPUnit_Framework_TestCase
     public function testTag()
     {
         $wrapper = new GitWrapper();
-        $output = $wrapper->git('tag -l', __DIR__ . '/..');
+        $output = explode("\n", trim($wrapper->git('tag -l', __DIR__ . '/..')));
+        rsort($output);
 
-        $this->assertTrue($output === null);
+        $this->assertTrue(version_compare($output[0], Version::VERSION, '=='));
     }
 }

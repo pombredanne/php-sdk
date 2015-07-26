@@ -14,9 +14,10 @@ if (!$loader = include __DIR__.'/../vendor/autoload.php') {
 
 $app = new \Cilex\Application('VulnDB', \VulnDb\Version::VERSION);
 
-$app['service.vulnerability_database'] = function () { return new \VulnDb\Service\VulnerabilityDatabaseService; };
-$app['service.vulnerability_factory']  = function () { return new \VulnDb\Service\VulnerabilityFactoryService; };
-$app['service.reference']              = function () { return new \VulnDb\Service\ReferenceService; };
+$app['vulndb.service.repository'] = function () { return new \VulnDb\Service\VulnDbDataRepositoryService(); };
+$app['vulndb.service.database']   = function () { return new \VulnDb\Service\VulnerabilityDatabaseService(); };
+$app['vulndb.service.factory']    = function () { return new \VulnDb\Service\VulnerabilityFactoryService; };
+$app['vulndb.service.reference']  = function () { return new \VulnDb\Service\ReferenceService; };
 
 $app->command(new \VulnDb\Command\UpdateDatabaseCommand());
 
