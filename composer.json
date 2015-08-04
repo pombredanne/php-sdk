@@ -1,5 +1,5 @@
 {
-    "name": "vulndb/vulndb-php",
+    "name": "vulndb/php-sdk",
     "type": "library",
     "description": "Vulnerability database PHP SDK",
     "keywords": [
@@ -9,6 +9,7 @@
         "cwe",
         "wasc"
     ],
+    "homepage": "https://github.com/vulndb/php-sdk",
     "license": "MIT",
     "authors": [
         {
