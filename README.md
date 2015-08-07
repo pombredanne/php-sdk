@@ -26,4 +26,4 @@ To install/update the database, run:
 bin/vulndb update
 ```
 
-    Note: requires `git`
+Note: requires `git`
